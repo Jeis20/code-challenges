@@ -49,9 +49,13 @@ const addBonusPoints = (arr) => {
 // Return an array of curved scores;
 // ------------------------------------------------------------------------------------------------
 
-// const addCurve = (arr) => {
+const addCurve = (arr) => {
 //   // Solution code here...
-// }
+  for (let value in arr) {
+    arr[value] = arr[value] * 1.05;
+  }
+  return arr;
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -62,13 +66,15 @@ const addBonusPoints = (arr) => {
 // The speaker function should return the string in all uppercase letters only by invoking the callback.
 // ------------------------------------------------------------------------------------------------
 
-// const greeting = (word) => {
-//   // Solution code here...
-// }
+const greeting = (word) => {
+  // Solution code here...
+  return word.toUpperCase();
+}
 
-// const speaker = (message, callback) => {
-//   // Solution code here...
-// }
+const speaker = (message, callback) => {
+  // Solution code here...
+  return callback(message);
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -205,21 +211,21 @@ describe('Testing challenge 2', () => {
   });
 });
 
-// describe('Testing challenge 3', () => {
-//   test('It should increase each raw score by 5%', () => {
-//     const resultScores = addCurve([55, 79, 100, 85, 92]);
-//     const expectedScores = [ 57.75, 82.95, 105, 89.25, 96.60000000000001 ];
-//     for (let i in expectedScores) {
-//       expect(resultScores[i]).toBeCloseTo(expectedScores[i]);
-//     }
-//   });
-// });
+describe('Testing challenge 3', () => {
+  test('It should increase each raw score by 5%', () => {
+    const resultScores = addCurve([55, 79, 100, 85, 92]);
+    const expectedScores = [ 57.75, 82.95, 105, 89.25, 96.60000000000001 ];
+    for (let i in expectedScores) {
+      expect(resultScores[i]).toBeCloseTo(expectedScores[i]);
+    }
+  });
+});
 
-// describe('Testing challenge 4', () => {
-//   test('It should return the message with all uppercase characters', () => {
-//     expect(speaker('hello 301 students!', greeting)).toStrictEqual('HELLO 301 STUDENTS!');
-//   });
-// });
+describe('Testing challenge 4', () => {
+  test('It should return the message with all uppercase characters', () => {
+    expect(speaker('hello 301 students!', greeting)).toStrictEqual('HELLO 301 STUDENTS!');
+  });
+});
 
 // describe('Testing challenge 5', () => {
 //   test('It should add the number 8 to the array five times', () => {
