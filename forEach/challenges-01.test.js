@@ -143,6 +143,10 @@ const removeElements = (input, callback) => {
 
 const removeWithForEach = (input, callback) => {
   // Solution code here...
+  input.forEach (function(element) {
+    callback (element.input);
+  });
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -156,9 +160,15 @@ const removeWithForEach = (input, callback) => {
 // This anonymous function should accept up to three arguments: the element, the index, and the array.
 // ------------------------------------------------------------------------------------------------
 
-// const removeWithAnon = (input) => {
-//   // Solution code here...
-// }
+const removeWithAnon = (input) => {
+  // Solution code here...
+  input.forEach((element, index, input) => {
+    if (input[index] % 3 === 2) {
+      input.pop();
+    }
+  });
+  return input;
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
@@ -178,9 +188,9 @@ const removeWithForEach = (input, callback) => {
 // If the item is available, add it to your list. Return the final list.
 // ------------------------------------------------------------------------------------------------
 
-// const createList = (availableItems) => {
-//   // Solution code here...
-// }
+const createList = (availableItems) => {
+  // Solution code here...
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
@@ -196,9 +206,9 @@ const removeWithForEach = (input, callback) => {
 // Return the resulting output array.
 // ------------------------------------------------------------------------------------------------
 
-// const fizzbuzz = (arr) => {
-//   // Solution code here...
-// }
+const fizzbuzz = (arr) => {
+  // Solution code here...
+}
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
@@ -253,12 +263,12 @@ describe('Testing challenge 6', () => {
   });
 });
 
-// describe('Testing challenge 7', () => {
-//   test('It should remove three elements from the array', () => {
-//     expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([ 1, 2, 3, 4, 5, 6, 7 ]);
-//     expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
-//   });
-// });
+describe('Testing challenge 7', () => {
+  test('It should remove three elements from the array', () => {
+    expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([ 1, 2, 3, 4, 5, 6, 7 ]);
+    expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
+  });
+});
 
 // describe('Testing challenge 8', () => {
 //   test('It should remove three elements from the array', () => {
