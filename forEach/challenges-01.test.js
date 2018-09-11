@@ -144,7 +144,7 @@ const removeElements = (input, callback) => {
 const removeWithForEach = (input, callback) => {
   // Solution code here...
   input.forEach (function(element) {
-    callback (element.input);
+    callback (element, input);
   });
   return input;
 }
@@ -191,9 +191,9 @@ const removeWithAnon = (input) => {
 const createList = (availableItems) => {
   // Solution code here...
   let groceryList = [];
-  storeInventory.forEach((element) => {
+  availableItems.forEach((element) => {
     if (element.available === true) {
-      groceryList.push(element, name);
+      groceryList.push(element.name);
     }
   });
   return groceryList;
