@@ -30,9 +30,9 @@ const appendTheEnd = (str) => {
 // console.log(a) // [1, 2, 3, 1]
 // ------------------------------------------------------------------------------------------------
 
-const appendFirstToLast = (list) => {
+const appendFirstToLast = (list) => list.push(list[0])
   // Solution code here...
-}
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
