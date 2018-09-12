@@ -49,9 +49,8 @@ const appendFirstToLast = (list) => list.push(list[0])
 // console.log(a) // { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 // ------------------------------------------------------------------------------------------------
 
-const addBirthYearProperty = (obj, year) => {
+const addBirthYearProperty = (obj, year) => obj.yearBorn = year
   // Solution code here...
-}
 
 
 
