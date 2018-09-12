@@ -1,6 +1,5 @@
 'use strict';
 
-
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 1
 //
@@ -30,7 +29,7 @@ const appendTheEnd = (str) => {
 // console.log(a) // [1, 2, 3, 1]
 // ------------------------------------------------------------------------------------------------
 
-const appendFirstToLast = (list) => list.push(list[0])
+const appendFirstToLast = (list) => list.push(list[0]);
   // Solution code here...
 
 
@@ -49,7 +48,7 @@ const appendFirstToLast = (list) => list.push(list[0])
 // console.log(a) // { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 // ------------------------------------------------------------------------------------------------
 
-const addBirthYearProperty = (obj, year) => obj.yearBorn = year
+const addBirthYearProperty = (obj, year) =>       obj.yearBorn = year;
   // Solution code here...
 
 
@@ -72,6 +71,7 @@ const addBirthYearProperty = (obj, year) => obj.yearBorn = year
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
+  people.forEach(element => element.isAuthor = true)
 }
 
 
@@ -94,7 +94,7 @@ const setStatusAsAuthor = (people) => {
 
 const append = (list1, list2) => {
   // Solution code here...
-
+  list2.forEach(element => list1.push(element));
 }
 
 // ------------------------------------------------------------------------------------------------
