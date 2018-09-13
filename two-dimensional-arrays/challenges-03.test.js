@@ -101,7 +101,18 @@ const nestedArray = [ [ [1, 2, 3], [4, 5, 6] ], [ [7, 8, 9], [10, 11, 12] ], [ [
 
 const findFourteen = (array) => {
   // Solution code here...
-}
+  let x;
+  array.forEach(element => {
+    element.forEach(ele => {
+      ele.forEach(el => {
+        if (el === 14) {
+        x = el;
+      }
+      });
+    });
+  });
+  return x;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
