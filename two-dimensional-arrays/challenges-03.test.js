@@ -54,7 +54,7 @@ const salesData = (hours, data) => {
   // Solution code here...
   const salesObjects = [];
   const objCreator = () => ({});
-  hours.forEach((Element, indexes) => {
+  hours.forEach((element, indexes) => {
     salesObjects[indexes] = objCreator();
     salesObjects[indexes].time = element;
   });
@@ -79,6 +79,15 @@ const salesData = (hours, data) => {
 
 const giveValentines = (list) => {
   // Solution code here...
+  const valMsg = [];
+  for (let i = 0; i < list.length; i++) {
+    for (let j = 0; j < list.length; j++) {
+      if (list[i] !== list[j]) {
+        valMsg.push(`${list[i]} gives a Valentine to ${list[j]}.`);
+      }
+    }
+  }
+  return valMsg;
 };
 
 // ------------------------------------------------------------------------------------------------
