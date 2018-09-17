@@ -42,6 +42,12 @@ const isCapitalized = (string) => {
 
 const citiesAtoJ = (cities) => {
   // Solution code here...
+  const citiesAJ = [];
+  cities.forEach((element) => {
+    if (element.match(/^[A-J]/) !== null) {  citiesAtoJ.push(element);
+    }
+  });
+  return citiesAtoJ;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -58,6 +64,7 @@ const citiesAtoJ = (cities) => {
 
 const matchMonth = (input) => {
   // Solution code here...
+  return input.toString().search(/(\b[Oo]ct\b|\b[Oo]ctober\b)/) !== -1 ? true : false;
 };
 
 // ------------------------------------------------------------------------------------------------
