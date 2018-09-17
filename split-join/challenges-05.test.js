@@ -134,6 +134,9 @@ Use the split method for this function.
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.steps.forEach((element) => {
+    result.push(element.split('')[0]);
+  })
   return result;
 }
 
