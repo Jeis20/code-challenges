@@ -101,6 +101,17 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  let kids;
+  arr.forEach((element) => {
+    if (element.name === character) {
+      if (Object.values(element.children).length > 0) {
+        kids = true;
+      } else {
+        kids = false;
+      }
+    }
+  })
+  return kids;
 }
 
 /* ------------------------------------------------------------------------------------------------
