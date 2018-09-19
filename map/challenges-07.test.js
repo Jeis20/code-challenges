@@ -27,6 +27,11 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (input) => {
   // Solution code here...
+  const arr = [];
+  input.forEach((integer) => {
+    arr.push(2 ** integer);
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,6 +42,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (input) => {
   // Solution code here...
+  return input.map((integer) => 2 ** integer);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,6 +57,7 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (input) => {
   // Solution code here...
+  return input.map((character) => character.charCodeAt());
 };
 
 /*------------------------------------------------------------------------------------------------
