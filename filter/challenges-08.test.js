@@ -151,6 +151,7 @@ const characters = [
 
 const getCharactersWithoutChildren = (input) => {
   // Solution code here...
+  return input.filter(element => element.children === undefined);
 };
 
 /* ------------------------------------------------------------------------------------------------
