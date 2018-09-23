@@ -114,7 +114,11 @@ const snorlaxData = {
 
 const extractStat = (statName, input) => {
   // Solution code here...
-};
+//   input.reduce((acc, val) => {
+//     if (val.stat.name !== statName) {
+//     }
+//   })
+// };
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -124,6 +128,7 @@ Write a function that, given an array of numbers as input, uses ONE call to filt
 
 const calculateAverage = (input) => {
   // Solution code here...
+  return input.reduce((acc, val) => acc + val) / input.length;
 };
 
 /*------------------------------------------------------------------------------------------------
