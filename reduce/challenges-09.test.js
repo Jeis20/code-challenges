@@ -64,6 +64,13 @@ const characters = [
 
 const countNumberOfChildren = (input) => {
   // Solution code here...
+  return input.reduce((acc, val) => {
+    if (val.children !== undefined) {
+      return acc + val.children.length;
+    } else {
+      return acc;
+    }
+  }, 0);
 };
 
 /*------------------------------------------------------------------------------------------------
