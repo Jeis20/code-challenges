@@ -23,6 +23,8 @@ For example, findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'
 
 const findTagNames = elements => {
   // Solution code here...
+  return elements.map((element) => element.match(/\/\w+/g))
+    .reduce((accumulator, currentValue) => accumulator.concat(currentValue, []));
 }
 
 /*------------------------------------------------------------------------------------------------
