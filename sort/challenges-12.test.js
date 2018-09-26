@@ -47,6 +47,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (strs) => {
   // Solution code here...
+
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -64,6 +65,7 @@ Here is an example of the input:
 
 const sortByPrice = (objs) => {
   // Solution code here...
+  return objs.sort((a, b) => a.price - b.price);
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -76,6 +78,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (nums) => {
   // Solution code here...
+  return nums.sort((a, b) => a.length.toString() - b.toString().length);
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -98,6 +101,7 @@ const people = [
 
 const sortPeople = (people) => {
   // Solution code here...
+  return people.sort((a, b) => a.lastName > b.lastName);
 };
 
 /*------------------------------------------------------------------------------------------------
