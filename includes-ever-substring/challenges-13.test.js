@@ -61,6 +61,7 @@ const onlyOddChars = (str) => {
 
 const allHappy = (strs) => {
   // Solution code here...
+  return strs.every((word) => word.includes(':)'));
 };
 
 // ------------------------------------------------------------------------------------------------
