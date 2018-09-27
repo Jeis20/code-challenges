@@ -24,6 +24,7 @@ const firstLetters = (strs) => {
 
 const findHappiness = (strs) => {
   // Solution code here...
+  return strs.filter((word) => word.includes(':)'));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -35,6 +36,7 @@ const findHappiness = (strs) => {
 
 const standardizePhoneNumbers = (phoneNumbers) => {
   // Solution code here...
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -47,6 +49,7 @@ const standardizePhoneNumbers = (phoneNumbers) => {
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  return str.split('').reduce((acc, curr, index) => index % 2 !== 0 ? acc + curr : acc, '');
 };
 
 // ------------------------------------------------------------------------------------------------
