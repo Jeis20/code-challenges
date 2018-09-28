@@ -85,6 +85,7 @@ let starWarsData = [{
 
 let biggerThanLuke = (data) => {
   // Solution code here...
+
 }
 
 /*------------------------------------------------------------------------------------------------
@@ -102,6 +103,7 @@ Which could be sorted by name or price.
 
 const sortBy = (property, objs) => {
   // Solution code here...
+  return objs.sort((a, b) => a[property] > b[property]);
 };
 
 // ------------------------------------------------------------------------------------------------
